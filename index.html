@@ -11,29 +11,150 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-      /* General Reset */
-      * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-          font-family: "Hanken Grotesk", serif;
-      }
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Hanken Grotesk", serif;
+    }
 
-      /* Centering the Container */
-      body {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 100vh;
-          background-color: #f0f4fc;
-          padding: 20px;
-      }
+    /* Centering the Container */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f4fc;
+      padding: 20px;
+    }
 
+    /* Main Card Container */
+    .container {
+      display: flex;
+      flex-direction: column;
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    /* Left Panel - Score Section */
+    .result-card {
+      background: linear-gradient(to bottom, #6a5acd, #483d8b);
+      text-align: center;
+      color: white;
+      padding: 20px;
+      border-radius: 20px 20px 0 0;
+    }
+
+    .result-card .title {
+      font-size: 18px;
+      font-weight: bold;
+      opacity: 0.8;
+    }
+
+    .result-card .score {
+      width: 100px;
+      height: 100px;
+      background: rgba(255, 255, 255, 0.2);
+      margin: 15px auto;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .result-card .score h1 {
+      font-size: 40px;
+      font-weight: bold;
+    }
+
+    .result-card .score p {
+      font-size: 14px;
+      opacity: 0.8;
+    }
+
+    .result-card .status {
+      font-size: 22px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .result-card .description {
+      font-size: 14px;
+      margin-top: 5px;
+      opacity: 0.8;
+      padding: 0 20px;
+    }
+
+    /* Right Panel - Summary Section */
+    .summary-card {
+      padding: 20px;
+    }
+
+    .summary-card h2 {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    /* Score Items */
+    .score-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px;
+      border-radius: 8px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    /* Color-Coding for Score Sections */
+    .reaction {
+      background: #ffe5e5;
+      color: #d9534f;
+    }
+
+    .memory {
+      background: #fff9db;
+      color: #f0ad4e;
+    }
+
+    .verbal {
+      background: #e0f7e9;
+      color: #5cb85c;
+    }
+
+    .visual {
+      background: #e3e7ff;
+      color: #5a67d8;
+    }
+
+    /* Continue Button */
+    .continue-btn {
+      width: 100%;
+      background: linear-gradient(to right, #6a5acd, #483d8b);
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      margin-top: 15px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .continue-btn:hover {
+      opacity: 0.9;
+    }
 
     .attribution { font-size: 11px; text-align: center; clear: right;}
     .attribution a { color: hsl(228, 45%, 44%); }
     
-
   </style>
 </head>
 <body>
@@ -85,6 +206,7 @@
             <button class="continue-btn">Continue</button>
         </div>
       </div>
+      
       
       <!-- Footer -->
       <div class="attribution">
